@@ -7,12 +7,29 @@ ob_start();
 $mapHintHotkey = [
 	"close sublime text" => "ctrl + shif + W",
 	"close sublime" => "ctrl + shif + W",
+	
 	"color console php" => "\\033[01;32mGREEN\\033[0m, result: \033[01;32mGREEN\033[0m",
 	"color console" => "\\033[01;32mGREEN\\033[0m, result: \033[01;32mGREEN\033[0m",
+	
 	"vlc noui" => "vlc -I ncurses <file>\n@see https://wiki.videolan.org/Documentation:Modules/ncurses",
 	"vlc console" => "vlc -I ncurses <file>\n@see https://wiki.videolan.org/Documentation:Modules/ncurses",
 	"vlc without ui" => "vlc -I ncurses <file>\n@see https://wiki.videolan.org/Documentation:Modules/ncurses",
 
+	"git remote delete branch" => "git push origin --delete <branchName>",
+	"git delete remote branch" => "git push origin --delete <branchName>",
+	"git remote delete" => "git push origin --delete <branchName>",
+
+	"mac address" => "cmd: getmac",
+	"get mac address" => "cmd: getmac",
+
+	"xin donate" => "patreon.com",
+
+	"run bash file" => "create <file>.bat, which wrap <file>.bash, script:\n\n@echo OFF
+:: in case DelayedExpansion is on and a path contains ! 
+setlocal DISABLEDELAYEDEXPANSION
+bash \"%~dp0\033[01;32mapt-cyg\033[0m\" %*",
+
+	"all hints" => "all hints",
 
 ];
 
@@ -39,8 +56,13 @@ try{
 		return;
 	}
 
-	//FILE1 exists
+	_echo("");
 	_echo($mapHintHotkey[$whichHotkey]);
+
+	//special case "all hints"
+	if($mapHintHotkey[$whichHotkey] == "all hints"){
+		var_dump($mapHintHotkey);
+	}
 }finally{
 	//build log name
 	$date = new DateTime();

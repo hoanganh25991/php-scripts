@@ -1,10 +1,9 @@
 <?php
-$msgPatterns = [
-	"sorry" => mb_convert_encoding("(ò_ó)", "Windows-1252", "UTF-8") . " We're sorry",
-	"mano" => "ba xa yeu dau"
-];
-
 function _echo($msg, $important = false){
+	$msgPatterns = [
+		"sorry" => mb_convert_encoding("(ò_ó)", "Windows-1252", "UTF-8") . " We're sorry",
+		"mano" => "ba xa yeu dau"
+	];
 	//transform into sample pattern
 	if(isset($msgPatterns[$msg])){
 		$msg = $msgPatterns[$msg];

@@ -1,5 +1,6 @@
 {
     "require": {
-        "jakub-onderka/php-console-color": "^0.1.0"
+        "jakub-onderka/php-console-color": "^0.1.0",
+        "erusev/parsedown": "^1.6"
     }
 }
