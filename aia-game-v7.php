@@ -1,7 +1,7 @@
 <?php
-$indexPath = "C:\Users\hoanganh25991\Desktop\index.html";
+$indexPath = "C:\\Users\\hoanganh25991\\Desktop\\index.html";
 
-$aiaFolderPath = "C:\Users\hoanganh25991\Desktop\aia-game-v7";
+$aiaFolderPath = "C:\\Users\\hoanganh25991\\Desktop\\aia-game-v7";
 
 @copy($indexPath, $aiaFolderPath . "\\" . "index.html");
 

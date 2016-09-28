@@ -5,7 +5,7 @@ $Parsedown = new Parsedown();
 
 var_dump($argv);
 
-$mardownConent = file_get_contents(__DIR__ . '/' . $argv[1]);
+$mardownConent = file_get_contents(getcwd() . '/' . $argv[1]);
 
 $htmlFile = fopen('index.html', 'w');
 

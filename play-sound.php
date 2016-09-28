@@ -11,6 +11,6 @@ function play_sound($soundName = "end"){
 	// 	_echo("No /033[01;32m{$soundName}/033[0m found");
 	// 	return;
 	// }
-	shell_exec("vlc.exe --vout none D:/work-station/php-scripts/sound/{$soundName}.mp3");
+	shell_exec("vlc --vout none D:/work-station/php-scripts/sound/{$soundName}.mp3");
 }
 play_sound();
