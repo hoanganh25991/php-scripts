@@ -37,7 +37,8 @@ try{
 	$date = new DateTime();
 	$secondInDay = 24*60*60*$date->format('H') + 60*$date->format('i') + $date->format('s');
 	$logFileName = "log-" . $date->format('Y-m-d') . "_{$secondInDay}.txt";
-	_echo("[{$logFileName}] \t |please read in cwd");
+	$cwd = getcwd();
+	_echo("[{$logFileName}] \t |please read in {$cwd}");
 	$log = ob_get_clean();
 
 	//notify to console

@@ -46,6 +46,13 @@ setlocal DISABLEDELAYEDEXPANSION
 bash \"%~dp0\033[01;32mapt-cyg\033[0m\" %*",
 
 	"all hints" => "all hints",
+	"clear data" => "SET FOREIGN_KEY_CHECKS = 0;
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+TRUNCATE TABLE rooms;
+SET FOREIGN_KEY_CHECKS = 1;
+COMMIT;
+SET AUTOCOMMIT = 1 ;"
 
 ];
 
